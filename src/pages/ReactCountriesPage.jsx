@@ -6,6 +6,7 @@ import Main from '../components/Main';
 import TextInput from '../components/TextInput';
 
 import { allCountries } from '../data/countries';
+import MapComponent from '../components/MapComponent';
 
 export default function ReactCountriesPage() {
   const [countryFilter, setCountryFilter] = useState('');
@@ -60,6 +61,7 @@ export default function ReactCountriesPage() {
           {filteredCountries}
         </Countries> */}
 
+<MapComponent visitedCountries={visitedCountries} toggleVisitedCountry={toggleVisitedCountry} />
         <Countries>
           <h2 className="text-center font-semibold">
             {filteredCountries.length} country(ies)
